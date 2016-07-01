@@ -2,146 +2,302 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>向上无缝滚动</title>
-<style>
-body {
-	font-size: 12px;
-	line-height: 24px;
-	text-algin: center;        /* 页面内容居中 */
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+<title>旅游推荐</title>
+<style type="text/css">
+.topmenu {
+	height: 70px;
+	width: 960px;
+	
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 15px;
+	margin-left: auto;
+	position:relative;
 }
-* {
-	margin: 0px;
-	padding: 0px;            /*  去掉所有标签的marign和padding的值  */
-}
-ul {
-	list-style: none;           /*  去掉ul标签默认的点样式  */
-}
-a img {
-	border: none;        /*  超链接下，图片的边框  */
-}
-a {
-	color: #333;
-	text-decoration: none;     /* 超链接样式 */
-}
-a:hover {
-	color: #ff0000;
-}
-#mooc {
-	width: 399px;
-	border: 5px solid #ababab;
-	-moz-border-radius: 15px;      /* Gecko browsers */
-	-webkit-border-radius: 15px;   /* Webkit browsers */
-	border-radius: 15px;
-	box-shadow: 2px 2px 10px #ababab;
-	margin: 50px auto 0;
-	text-align: left;               /* 让新闻内容靠左 */
-}
-/*  头部样式 */	
-#moocTitle {
-	height: 62px;
-	overflow: hidden;  /* 这个一定要加上，内容超出的部分要隐藏，免得撑高头部 */
-	font-size: 26px;
-	line-height: 62px;
-	padding-left: 30px;
-	background-image: -moz-linear-gradient(top, #f05e6f, #c9394a); /* Firefox */
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f05e6f), color-stop(1, #c9394a)); /* Saf4+, Chrome */
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8fa1ff', endColorstr='#f05e6f', GradientType='0'); /* IE*/
-	border: 1px solid ##f05e6f;
-	-moz-border-radius: 8px 8px 0 0;      /* Gecko browsers */
-	-webkit-border-radius: 8px 8px 0 0;   /* Webkit browsers */
-	border-radius: 8px 8px 0 0;
-	color: #fff;
-	position: relative;
-}
-#moocTitle a {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-	display: inline;
-	color: #fff;
-	font-size: 12px;
-	line-height: 24px;
-}
-/*  底部样式 */
-#moocBot {
-	width: 399px;
-	height: 10px;
-	overflow: hidden;     /* 这个一定要加上，内容超出的部分要隐藏，免得撑高底部结构 */
-}
-/*  中间样式 */
-#moocBox {
-	height: 144px;
-	width: 335px;
-	margin-left: 25px;
-	margin-top: 10px;
-	overflow: hidden;    /*  这个一定要加，超出的内容部分要隐藏，免得撑高中间部分 */
-}
-#mooc ul li {
-	height: 24px;
-}
-#mooc ul li a {
-	width: 180px;
+#topmenuleft {
 	float: left;
-	display: block;
-	overflow: hidden;
-	text-indent: 15px;
-	height: 24px;
+	height: 20px;
+	width: 90px;
+	margin-left: 10px;
+	border:2px solid #09C;
+	border-radius:8px;
+	
+	position:absolute;
+	text-align:center;
+	color:white;
+	background-color:#09c;
 }
-#mooc ul li span {
+.topmenuright {
 	float: right;
-	color: #999;
+	height: 20px;
+	width: 160px;
+	margin-right:110px;
+	font-size: 14px;
+	margin-top: 35px;	
 }
-</style>
-</head>
+.topmenuright a{
+	text-decoration:none;
+	color:black;
+	}
+.topmenuright a:hover{
+	color:#09c;
+	}
+
+ .topmenuright2 {
+	float: right;
+	height: 30px;
+	width: 90px;
+	border: 2px solid #09c;
+	border-radius:25px;
+	text-align:center;
+	padding-top:9px;
+	margin-top:21px;
+	
+	
+}
+.topmenuright2  a{
+	text-decoration: none;
+	float: right;
+	border:none;
+	display:block;
+	height: 30px;
+	width: 90px;
+	padding-top:-15px;
+	border-radius:25px;
+	text-decoration: none;
+	color: #09C;
+	}
+
+.topmenu .topmenuright2:hover a{
+	color:white;
+	
+	}/**/
+.orange
+{
+    background-color: #09c;
+    color:White;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+.toptitle {
+	height: 200px;
+	width: 960px;
+	margin:20px auto;
+	
+	border-bottom: 3px solid  rgba(200,200,200,0.2);
+	
+}
+.toptitle h3{
+	font-size: 36px;
+	text-align: center;
+	font-weight: bold;
+	padding-top:30px;
+	color:#09c;
+	}
+/*.toptitletime{
+	font-size:16px;
+	width:100px;
+	height:50px;
+	background-color:#09C;
+	float:left;
+	}*/
+
+
+
+
+
+
+
+
+.content {
+	height: 250px;
+	width: 960px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	border-bottom: 3px solid  rgba(200,200,200,0.2);
+}
+.contentleft{
+	height: 200px;
+	width: 200px;
+	float: left;
+	
+	}
+.contentright{
+	height: 200px;
+	width: 740px;
+	float: right;
+	line-height:25px;
+	letter-spacing:1px;
+	}
+.contentright h4 a{
+	text-decoration:none;
+	color:black;
+	}
+.contentright h4 a:hover{
+	color:#09c;
+	}
+.contentright p{
+	font-size:14px;
+	}
+.h4 {
+	letter-spacing: 1em;
+	
+}
+.content .contentright h4 {
+	letter-spacing: 1em;
+	word-spacing: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.foter {
+	background-color: #09c;
+	
+	width: 100%;
+	min-width:960px;
+	color:white;
+	text-align:center;
+	font-size:16px;
+	padding-top:7px;
+	letter-spacing: 1em;
+}
+
+
+</style></head>
 
 <body>
-<!--  慕课网课程公告开始 -->
-<div  id="mooc"> 
-<!--  头部 -->
-<h3 id="moocTitle">最新课程<a href="#" target="_self">更多>></a> </h3>
-<!--  头部结束 --> 
-<!--  中间 -->
-<div  id="moocBox">
-    <ul id="con1">
-        <li><a href="#">1.学会html5 绝对的屌丝逆袭（案例）</a><span>2013-09-18</span></li>
-        <li><a href="#">2.tab页面切换效果（案例）</a><span>2013-10-09</span></li>
-        <li><a href="#">3.圆角水晶按钮制作（案例）</a><span>2013-10-21</span></li>
-        <li><a href="#">4.HTML+CSS基础课程(系列)</a><span>2013-11-01</span></li>
-        <li><a href="#">5.分页页码制作（案例）</a><span>2013-11-06</span></li>
-        <li><a href="#">6.导航条菜单的制作（案例）</a><span>2013-11-08</span></li>
-        <li><a href="#">7.信息列表制作(案例)</a><span>2013-11-15</span></li>
-        <li><a href="#">8.下拉菜单制作(案例)</a><span>2013-11-22</span></li>
-        <li><a href="#">9.如何实现“新手引导”效果</a><span>2013-12-06</span></li>
-    </ul>
-    <ul id="con2">
-    </ul>
-</div>
-<!--  中间结束 --> 
-</div>
-<!--  慕课网课程公告结束 --> 
+<div class="topmenu">
+  <div id="topmenuleft">
+    
+  </div>
+ <div class="topmenuright2"><a href="https://lvyou.baidu.com/" target="_blank"> 更多...</a></div>
+<!-- <a href="https://lvyou.baidu.com/" target="_blank" class="topmenuright2">更多...</a>-->
+  <div class="topmenuright">
+  <a href="#"><strong>nihaoapy_8594@qq.com</strong></a>
+  </div>
+  
+  </div>
+  
+  <div class="toptitle">
+      <!-- <div class="toptitletime"></div>-->
+      <h3>簡單Dê旅行</h3>
+  </div>
+  
+  
+  
+<div class="content">
+      <div class="contentleft"><img src="img/xupu1.png" alt="溆浦" width="200px" height="200px"/></div>
+      <div class="contentright">
+          <h4><a href="http://baike.baidu.com/link?url=CB1Vt0gpIc2LVljtyNG0Pcu3d_jOIHcKOOKs9jjPe7CllOJk0OT_p_OGjSEWYbE48HB6o5WBA3sfm8KEqO52oq" target="_blank">溆浦思蒙丹霞山水</a></h4>
+          <p style="text-indent:2em;">中国溆浦思蒙十里丹霞“小桂林”距县城西十公里。思蒙十里丹霞，十里美           景，三十平方公里的丹霞地貌，分布在溆水两岸，俨然如桂林漓江，秀峰如画。座座小山似巨大的盆景，倒映在碧水之中...</p>
+    </div>
+  </div>
+   <div class="content">
+      <div class="contentleft">
+          <div class="contentleft"><img src="img/chongqing.jpg" alt="重庆" width="200px" height="200px"/></div>
+      </div>
+      <div class="contentright">
+           <h4><a href="https://lvyou.baidu.com/chongqing/?from=zhixin" target="_blank">向往山城--重庆</a></h4>
+           <p style="text-indent:2em;">重庆，它是一座山城，起伏的山势和依山而建的楼房让地图在这里显得用处不大，因为地图是平面的，而重庆则是立体的。长江和嘉陵江的交汇处，云天与高楼相接，薄雾弥散，宛如仙境一般，这里的人和这里的美食一样，火辣辣的直接抵达人心，直来直去从不绕弯子,端的是豪爽二字。 小吃、美女、火锅、通通都是重庆的标签。历史的偶然性和必然性在这里得到重合，让它既充满了江湖味又时时被现代化文明充斥着。 每当暮色降临，万家灯火璀璨，流光溢彩。它的夜景可是公认比上海和香港的还要漂亮...</p>
+      </div>
+  </div>
+   <div class="content">
+      <div class="contentleft">
+          <img src="img/lagong.jpg" alt="拉萨" width="200px" height="200px"/>
+      </div>
+      <div class="contentright">
+           <h4><a href="https://lvyou.baidu.com/budalagong/?from=zhixin" target="_blank">雪域高原宝石--拉萨</a></h4>
+           <p style="text-indent:2em;">看到了美丽而雄伟的布达拉宫，在蓝天白云的映衬下格外辉煌，而且很是壮观。也是藏族人民最神圣的地方，很多虔诚的信徒。承载的是历史变革之中的柔情。藏族同胞都很淳朴，肃穆的心情...</p>
+      </div>
+  </div>
+   <div class="content">
+      <div class="contentleft">
+            <img src="img/hengshan.png" alt="衡山" width="200px" height="200px"/>
+      </div>
+      <div class="contentright">
+           <h4><a href="https://lvyou.baidu.com/hengyanghengshan/" target="_blank">佛门圣地--南岳衡山</a></h4>
+           <p style="text-indent:2em;">衡山，又名南岳。由于气候条件较其他四岳为好，处处是茂林修竹，终年翠绿；奇花异草，四时飘香，自然景色十分秀丽，因而又有“南岳独秀”的美称。 祝融峰之高、藏经殿之秀、水帘洞之奇、方广寺之深堪称“衡山四绝”；春观花、夏看云、秋望日、冬赏雪为“衡山四季佳景”。 南岳衡山还有许多名胜古迹和神话传说，吸引了历代各种人物，形成丰富多彩的文化沉积，宛如一个辽阔的人文与山水文化和谐统一、水乳交融的巨型公园...</p>
+      </div>
+      </div>
+  </div>
+   <div class="content">
+      <div class="contentleft">
+           <img src="img/xisha2.png" alt="西沙" width="200px" height="200px"/>
+      </div>
+      <div class="contentright">
+           <h4><a href="https://lvyou.baidu.com/xishaqundao/?from=zhixin" target="_blank">南国群岛--美丽西沙</a></h4> 
+            <p style="text-indent:2em;">西沙群岛 它位于海南岛东南约180公里。从东北向西南伸展，在长250公里，宽约150公里的海域里，由45座岛、洲、礁、沙滩组成。西沙群岛岛屿，东面为宜德群岛，由北岛、石岛和永兴岛等7个岛屿组成；西面是永乐群岛，由金银、中建、珊瑚8个岛屿组成。 西沙群岛上栖息着鸟类40多种，常见的有鲣鸟、乌燕鸥、黑枕燕鸥、大凤头燕鸥和暗缘乡眼等。在整个树林的上层及其上空，海鸟成千上万终日盘旋飞翔，千鸣万啭，自成奇观，素称“鸟的天堂”...</p>
+      </div>
+  </div>
+  
+<div class="foter">谢谢阅读</div>
+
+
+
 
 <script type="text/javascript">
- var area = document.getElementById('moocBox');
- var con1 = document.getElementById('con1');
- var con2 = document.getElementById('con2');
- var speed = 50;
- area.scrollTop = 0;
- con2.innerHTML = con1.innerHTML;
- function scrollUp(){
-	 if(area.scrollTop >= con1.scrollHeight) {
-		 area.scrollTop = 0;
-		 }else{
-		   area.scrollTop ++; 
-		 } 
-}
-var myScroll = setInterval("scrollUp()",speed);
-area.onmouseover = function(){
-	 clearInterval(myScroll);
-	}
-area.onmouseout = function(){
-	 myScroll = setInterval("scrollUp()",speed);
-	}
- </script>
-</body>
-</html>
+     //颜色变更
+   $(function () {
+                $(".topmenuright2").hover(
+                function () {
+                    $(this).addClass("orange");
+                },
+                function () {
+                    $(this).removeClass("orange")
+                })
+            });
+			
+			
+			//显示时间
+	     window.onload=function(){
+		    var mydate=new Date();
+			var d=mydate.getDay();
+			var weekday=new Array(7);
+				  weekday[0]="星期日"
+				  weekday[1]="星期一"
+				  weekday[2]="星期二"
+				  weekday[3]="星期三"
+				  weekday[4]="星期四"
+				  weekday[5]="星期五"
+				  weekday[6]="星期六"
+			document.getElementById("topmenuleft").innerHTML=weekday[d];
+		}
+</script>
 
+
+</body>
+
+</html>
