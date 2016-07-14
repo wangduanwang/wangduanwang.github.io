@@ -20,7 +20,7 @@ body{}
 }
 #topmenuleft {
 	float: left;
-	height: 40px;
+	height: 30px;
 	width: 90px;
 	margin-left: 10px;
 	margin-top:20px;
@@ -83,7 +83,7 @@ body{}
 
 .topmenuright2 {
 	float: right;
-	height: 40px;
+	height: 30px;
 	width: 90px;
 	border: 2px solid #09c;
 	border-radius:0 25px;
